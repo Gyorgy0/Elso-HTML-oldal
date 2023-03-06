@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kimeneti perifériák - Színkezelés</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+			<nav>
+				<a href="kijelzok.html">Kijelzők</a>
+				<a class="active" href="szinkezeles.html">Színkezelés</a>
+				<a href="grafikus_kartyak.html">Grafikus kártyák</a>
+				<a href="nyomtatok.html">Nyomtatók</a>
+				<a href="index.html">Kezdőlap</a>
+				<a href="plotterek.html">Plotterek</a>
+				<a href="projektorok.html">Projektorok</a>
+				<a href="hangszorok.html">Hangszórók</a>
+				<a href="forrasok.html">Források</a>
+				<a href="dark_szinkezeles.html">Sötét mód</a>
+			</nav>
+		<div class="container">
+			<br>
+			<section>
+				<h1>Színkezelés</h1>
+				<p>A monitor fényereje egy adott érték: általában 50-300 cd/m2, amit a berendezés meg tud jeleníteni. Maximális fényerő esetén a monitor képe fehér, nulla fényerő esetén fekete. Minden pixel fényessége változtatható a maximum és minimum között, mindegyik pixelnek változtatható külön-külön az R, G, B értéke, – így keletkezik a színes kép. A monitort videokártya vezérli. A képernyőre eső külső fény (napsugár, lámpa) csökkenti a láthatóságot, az észlelt fényerőt és a színek ragyogását. A kezdeti kijelzők még csak monokróm (egyszínű) berendezések voltak. Az RGB színfelbontás fontos adata a színmélység (vagy bit-mélység, color-depth).
+				</p>
+				<p>Minden egyes pixel fényerősségének változását a tár bitjeinek száma (n) határozza meg. Régebben n= 1, 2, 4, 6 ma leggyakrabban 8 bitet (1 Byte-ot) használunk alapszínenként, ezt True-color-nak is nevezik. A 3 alapszínből 2n intenzitáslépcső nyerhető, az összes színingerkombináció száma: 2^(3*n)
+				</p>
+				<p>A fényerő a nulla és a maximum között változik, és e határok között diszkrét (nem folytonos) értékeket vehet fel. A kisebb színfelbontás nagyobb lépésközt jelent a szélső értékek (0 és max.) között, a nagy színfelbontás pedig kisebb, finomabb változást.
+				</p>
+				<p><b>Színmódok</b></p>
+				<p>Világszerte az egyik legelterjedtebb fényképfeldolgozó és képszerkesztő szoftver az Adobe Photoshop, különféle színmódokat használ, attól függően milyen célra (nyomtatás, internet) készül a kép, és milyen méretű képfájlra van szükség.
+				</p>
+				<br>
+				<h2>Bitmap (bittérkép) mód</h2>
+				<p>Mindössze 1 bitet használ egy kép megjelenítésére: a képpont vagy fehér vagy fekete. A színinformáció elvész, a képminőség sem jó, („grízes”) de így keletkezik a legkisebb méretű képfájl.<br>
+				Az alábbi 3 ábrán minden színt a fehér-fekete helyettesíti, csak mintázatukban különböznek:<br>
+				1. a közepesnél világosabb árnyalatok fehérek, az annál sötétebbek feketék<br>
+				2. szabályos (raszteres) elrendezésű fekete pontok, melyek a sötétebb képrészeken sűrűbben helyezkednek el<br>
+				3. szabálytalan elrendezésű fekete pontok, melyek a sötétebb képrészeken sűrűbben helyezkednek el
+				</p>
+				<img src="Kepek/Kép12.jpg" title="Bitmap mód" id="Kep12" alt="Bitmap mód">
+				<br>
+				<h2>Grayscale mód</h2>
+				<p>A szürkeskála (grayscale) a fekete és fehér között max. 256 árnyalatot tartalmazhat. A pixelenként 8 bit információ tónusában helyes, de színek nélküli képet eredményez. Más szóhasználat szerint: akromatikus kép. A színskála itt a halványszürkétől a feketésszürkéig (általánosságban fehértől a feketéig) tart.
+				</p>
+				<img src="Kepek/Kép13.jpg" title="Grayscale mód" id="Kep13" alt="Grayscale mód">
+				<br>
+				<h2>Duotone mód</h2>
+				<p>Mely lehet monotone, tritone ill. quadtone is – egy, két, három ill. négy színből összetett tónusos kép. Nem a valós színekből álló, de színes árnyalatos kép. A fotók alatt a színskála és az ahhoz felhasznált 2 ill. 3 szín. Ezt a színmódot a nyomtatásban használják, ezért a fehér nincs „megadva”, az értelemszerűen a fehér papír.
+				</p>
+				<img src="Kepek/Kép14.jpg" title="Duotone és Tritone mód" id="Kep14" alt="Duotone és Tritone mód">
+				<br>
+				<h2>Indexed színmód</h2>
+				<p>Egy színes képből maximum 256 (8 bit) színből álló képet konvertál, vagyis a képet 256 vagy kevesebb színre redukálja. Ha ennél több szín van a képen, akkor az árnyalatot a legközelebbi színárnyalattal helyettesíti. Minden színnek sorszáma van 0-255 között, innen az indexed elnevezés. Mindössze egy színcsatornát használ, ezért kisméretű képfájl keletkezik, de csak számítógépes környezetben (pl. interneten) megfelelő a minősége, nyomtatásban nem.
+				</p>
+				<img src="Kepek/Kép15.jpg" title="Indexed mód" id="Kep15" alt="Indexed mód">
+				<br>
+				<h2>RGB színmód</h2>
+				<p>Minden alapszínre (vörös, zöld, kék) egy színcsatornát használ, ma leggyakrabban 8 bitet csatornánként. A színskála a fekete és a tiszta szín között húzódik. Mennél élénkebb színű egy folt az adott csatornán, annál nagyobb intenzitású ott az alapszín, a sötét foltokon annál kisebb. Pl. az eper színében szinte semmi zöld sincs, csak a csillogó részeken, az őszibarackban sok a vörös és a zöld.
+				</p>
+				<img src="Kepek/Kép16.jpg" title="RGB színmód" id="Kep16" alt="RGB színmód">
+				<br>
+				<h2>CMYK színmód</h2>
+				<p>Minden alapszínre (ciánkék, bíborvörös, sárga, fekete) egy színcsatornát szimulál, melyet a kép nyomdai előkészítése során használnak. A legtisztább CMYK színek nem érik el az RGB színek telítettségét. Minél sötétebb egy folt az adott csatornán, annál több kell abból az alapszínből, a világos foltokon annál kevesebb. Pl. az eper színében szinte semmi ciánkék sincs, az áfonyában annál több, az őszibarackban sok a sárga, a többi színből csak kevés. Ez a színmód rendkívül elterjedt a színes nyomtatásban.
+				</p>
+				<img src="Kepek/Kép17.jpg" title="CMYK színmód" id="Kep17" alt="CMYK színmód">
+				<br>
+				<h2>Lab színmód</h2>
+				<p>Eszközfüggetlen színmód, három színcsatornát szimulál, L*a*b* koordinátákkal azonosítja a színeket. Értelmezése 3 dimenzióban lehetséges, ahol a függőleges tengelyen a<br>
+				– L (Luminance, analóg a világosság érzetével), gyakorlatilag egy szürkeárnyalatos kép.<br> 
+				– Az a és b koordináták az erre merőleges síkban helyezkednek el.<br>
+				Az a koordináta a vörös-zöld, a b pedig a sárga-kék tartalmat jelzi.<br>
+				A rendszer origója, ahol a három koordináta metszi egymást, egy közepes szürke.<br>
+				Az eper színében sok a vörös és a sárga, az áfonyáéban a kék. Ahol szürkét látunk pl. az a csatornán, ott a vörös-zöld színpárból semmi nincs, de van (vagy lehet) a másik két csatorna színeiből.
+
+				</p>
+				<img src="Kepek/Kép18.jpg" title="Lab színmód" id="Kep18" alt="Lab színmód">
+			</section>
+		</div>
+		<footer>
+			<f>Készítette: Lukovics György</f>
+			<br>
+			<br>
+			<f>E-mail: 131557@student.ujs.sk
+			</f>
+		</footer>
+	</body>	
+</html>
