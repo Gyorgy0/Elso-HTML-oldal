@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kimeneti perifériák - Grafikus kártyák</title>
+		<link rel="stylesheet" type="text/css" href="dark-style.css">
+	</head>
+	<body>
+			<nav>
+				<a href="dark_kijelzok.html">Kijelzők</a>
+				<a href="dark_szinkezeles.html">Színkezelés</a>
+				<a class="active" href="dark_grafikus_kartyak.html">Grafikus kártyák</a>
+				<a href="dark_nyomtatok.html">Nyomtatók</a>
+				<a href="dark_index.html">Kezdőlap</a>
+				<a href="dark_plotterek.html">Plotterek</a>
+				<a href="dark_projektorok.html">Projektorok</a>
+				<a href="dark_hangszorok.html">Hangszórók</a>
+				<a href="dark_forrasok.html">Források</a>
+				<a href="grafikus_kartyak.html">Világos mód</a>
+			</nav>
+		<div class="container">
+			<br>
+			<section>
+				<h1>Grafikus kártyák jellemzése, fejlődése</h1>
+				<p>A videokártya, vagy rövidítve VGA (Video Graphics Array), video adapter, grafikus kártya vagy grafikus adapter a számítógép része. A számítógép által küldött képi információkat feldolgozza, és egy megjelenítő egység számára értelmezhető jelekké alakítja át. Ez az egység lehet CRT monitor, LCD monitor, LCD modul, HDTV vagy kivetítő is. A grafikus kártya és a megjelenítő különböző grafikus szabványok szerint kommunikálhat egymással. A videokártya a kivitelezés alapján lehet alaplapra integrált vagy bővítőkártya.<br>
+				Sorozatgyártásban a videokártya elvét elsőként 1977-ben az Apple II mikroszámítógép konstrukciójánál alkalmazták, melynek alaplapjára integrált képmegjelenítési lehetőségeit bővítőkártyák által lehetett kiegészíteni. Az első IBM PC 1981-ben kiadott típusában alkalmazott MDA (Monochrome Display Adapter) videokártya csupán az egyszínű, 80x25 karakteres megjelenítést tette lehetővé. Ezt követően az IBM CGA (Color Graphics Adapter) és a Hercules 1982-ben megjelent HGC (Hercules Graphics Card) videokártyái már a színes szövegkarakterek megjelenítését is támogatták.
+				</p>
+				<img src="Kepek/Kép19.jpg" title="Hercules grafikus kártya" id="Kep19" alt="Hercules grafikus kártya">
+				<p class="leiras">
+					Hercules grafikus kártya
+				</p>
+				<br>
+				<h2>Csatlakozási típusok</h2>
+				<ul><li>S100 bus</li>
+					<li>ISA</li>
+					<li>C-bus</li>
+					<li>VMEbus</li>
+					<li>Zorro II</li>
+					<li>NuBus</li>
+					<li>MCA</li>
+					<li>EISA</li>
+					<li>Zorro III</li>
+					<li>VLB (VESA Local Bus)</li>
+					<li>PCI (Peripheral Componenet Interconnect)</li>
+					<li>UPA</li>
+					<li>USB</li>
+					<li>AGP (Accelerated Graphics Port)</li>
+					<li>PCI-X</li>
+					<li>PCIe (PCI Express) - legtöbb modern kártya ezt a csatlakozási típust használja</li>
+				</ul>
+				<br>
+				<h2>PCI</h2>
+				<p>PCI (Peripherial Component Interconnect) a CPU és a perifériák összekötésére szolgáló processzorfüggetlen adatút (sín, busz), 64 bit/33 MHz,120 MB/s. A PCI első változata 32 bites, és szinkronműködésű volt. A Pentium- hoz illeszkedve megjelent a 64 bites PCI busz. A processzorhoz illesztéséhez külön vezérlőáramkör szükséges.
+				</p>
+				<img src="Kepek/Kép20.jpg" title="PCI foglalat" id="Kep20" alt="PCI foglalat">
+				<p class="leiras">
+					PCI foglalat egy alaplapon
+				</p>
+				<br>
+				<h2>AGP</h2>
+				<p>Az AGP az angol Accelerated Graphics Port rövidítéséből származik, ami gyorsított grafikus portot jelent. A segítségével lehetőség nyílt arra, hogy a nagy képek megjelenítéséhez a kártya processzora a rendszermemóriát is használatba vegye. 4x gyorsabb a PCI sínnél. Mivel a 3D-s megjelenítés évről-évre több memóriát igényelt, a grafikus kártyák frame bufferének (képernyőmemória) memóriakapacitása egyre kevésbé volt elég. Az AGP alapjaiban a PCI buszrendszerre épít, de utóbbival szemben kifejezetten két végpont közti kommunikációra, a grafikus kártya és a processzor közötti nagysebességű átvitelre lett optimalizálva.
+				</p>
+				<img src="Kepek/Kép21.jpg" title="AGP foglalatok" id="Kep21" alt="AGP foglalatok">
+				<p class="leiras">
+					AGP foglalat és alfajtái
+				</p>
+				<br>
+				<h2>PCI Express</h2>
+				<p>A PCI Express (PCIe) az AGP és a PCI egyik utódja. A PCIe a PCI-hoz hasonlóan az OSI modell alsó négy rétegét implementálja (Fizikai, Adatkapcsolati, Hálózati és Szállítási réteg), legfelső réteg megvalósítása a két sín esetén kompatibilis, így az alkalmazások mindkét esetben ugyanazt a folytonos címzési modellt használhatják. A PCIe esetében a fizikai adatátvitel nagysebességű soros kapcsolaton keresztül történik, szemben a PCI sínnel, ahol 32- vagy 64 bites párhuzamos sínt alkalmaznak. A PCI-nál az eszközök osztoznak a sínen, míg a PCI Expressnél egy kapcsolón keresztül érik el (point-to-point síntopológia) a sínt (minden eszköz úgy látja, mintha saját külön sínnel rendelkezne. A kapcsoló gondoskodik a point-to-point kapcsolatok létrehozásáról és vezérli a sín adatforgalmát.
+				</p>
+				<img src="Kepek/Kép22.jpg" title="PCIe foglalat" id="Kep22" alt="PCIe foglalat">
+				<p class="leiras">
+					PCIe foglalat a számítógép alaplapon
+				</p>
+			</section>
+		</div>
+		<footer>
+			<f>Készítette: Lukovics György</f>
+			<br>
+			<br>
+			<f>E-mail: 131557@student.ujs.sk
+			</f>
+		</footer>
+	</body>	
+</html>

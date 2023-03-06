@@ -1,0 +1,117 @@
+body {
+	font-family: "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background-image: url("Kepek/header_img.jpg"),linear-gradient(transparent ,#330066 350px, black);
+	background-repeat: no-repeat;
+	background-blend-mode: darken;
+	background-size: contain;
+	color: white;
+}
+
+p {
+	text-align: justify;
+}
+
+nav {
+	background-image: radial-gradient(gray, black);
+	text-align: center;
+	margin-top: 200px;
+	position: relative;
+}
+
+.container {
+	width: 80%;
+	margin-left: 10%;
+	vertical-align: top;
+}
+
+.container section {
+	background-color: #0d001a;
+	box-shadow: 0px 0px 43px -25px rgba(0,0,0,0.75);
+	width: 100%;
+	padding: 45px;
+	box-sizing: border-box;
+	border-radius: 1px;
+	vertical-align: top;
+}
+
+#Outputdevices {
+	border: 1px solid #7575a3;
+  	border-radius: 4px;
+  	padding: 5px;
+  	width: 150px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+	
+}
+
+section img {
+	border: 1px solid #7575a3;
+  	border-radius: 4px;
+  	padding: 5px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 50%;
+}
+
+.leiras {
+	text-align: center;
+	font-size: 80%;
+}
+
+nav a {
+	display: inline-block;
+	background-image: radial-gradient(#1f1f2e, black);
+	background-blend-mode: color-burn;
+	color: white;
+	padding: 15px;
+	text-decoration: none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+nav a:hover {
+	color: black;
+	background-image: radial-gradient(white, gray);
+}
+
+nav a.active {
+  background-image: radial-gradient(white, gray);
+  color: black;
+}
+
+footer {
+	transform-style: preserve-3d;
+	background-color:#1D1D1D;
+	margin-top: 30px;
+	padding: 45px;
+}
+
+footer f {
+	color: cornsilk;
+	float: start;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+	background-color: #222222;
+	padding: 15px;
+	border-radius: 3px;
+	float: right;
+	border-color: white;
+}
+.forrasok a {
+	text-decoration: none;
+	color: white;
+}
+
+.forrasok a.hover {
+	color: white;
+}
